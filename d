@@ -20,12 +20,8 @@ else
     player:Kick("You are not whitelisted.")
 end
 
-local p = game.Players.LocalPlayer
-local whitelist = {
-   [p.Name] = true
-}
 
-if whitelist[p.Name] then
+if isWhitelisted(player.UserId) then
 	game.StarterGui:SetCore("SendNotification", {
 Title = "Press [Y] To Toggle";
 Text = "By EvenPast7903";
