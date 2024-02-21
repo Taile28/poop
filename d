@@ -1,4 +1,10 @@
+local p = game.Players.LocalPlayer
+local whitelist = {
+   [p.Name] = true
+}
 
+if whitelist[p.Name] then
+	game.StarterGui:SetCore("SendNotification", {
 Title = "Press [Y] To Toggle";
 Text = "By EvenPast7903";
 Duration = 15;
