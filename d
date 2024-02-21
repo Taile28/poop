@@ -1,4 +1,4 @@
-local pastebinUrl = "https://pastebin.com/nS9Sk2Cv" -- Replace PASTEBIN_URL_HERE with your actual Pastebin URL
+local pastebinUrl = "https://pastebin.com/rcjbvf8T" -- Replace PASTEBIN_URL_HERE with your actual Pastebin URL
 
 local whitelist = {}
 
