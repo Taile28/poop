@@ -1,3 +1,25 @@
+local whitelistURL = "https://pastebin.com/AyAQ0YDp" -- Replace PASTEBIN_URL_HERE with the URL of your Pastebin whitelist
+local player = game.Players.LocalPlayer
+
+-- Function to check if a player is whitelisted
+local function isWhitelisted(userID)
+    local whitelist = game.HttpService:GetAsync(whitelistURL)
+    for id in whitelist:gmatch('%d+') do
+        if tonumber(id) == userID then
+            return true
+        end
+    end
+    return false
+end
+
+-- Check if the player is whitelisted
+if isWhitelisted(player.UserId) then
+    game.Players:Chat("You are whitelisted.")
+else
+    game.Players:Chat("You are not whitelisted.")
+    player:Kick("You are not whitelisted.")
+end
+
 local p = game.Players.LocalPlayer
 local whitelist = {
    [p.Name] = true
